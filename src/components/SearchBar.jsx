@@ -28,7 +28,7 @@ function SearchBar({ onSearch, isLoading }) {
       aria-label="City weather search"
     >
       <label htmlFor="city-input" className="search-label">
-        Search city
+        City
       </label>
       <div className="search-row">
         <input
@@ -47,7 +47,7 @@ function SearchBar({ onSearch, isLoading }) {
           type="submit"
           className="search-btn"
           disabled={isLoading}
-          aria-label="Search weather"
+          aria-label={isLoading ? 'Searching…' : 'Search weather'}
         >
           {isLoading ? (
             <span className="btn-spinner" aria-hidden="true" />
@@ -62,14 +62,16 @@ function SearchBar({ onSearch, isLoading }) {
               strokeLinejoin="round"
               aria-hidden="true"
               className="search-icon"
-              width="18"
-              height="18"
+              width="17"
+              height="17"
             >
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
           )}
-          <span>{isLoading ? 'Searching…' : 'Search'}</span>
+          <span className="btn-label">
+            {isLoading ? 'Searching…' : 'Search'}
+          </span>
         </button>
       </div>
     </form>
