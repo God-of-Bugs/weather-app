@@ -1,6 +1,6 @@
 # Weather App
 
-Internship Task 3 — React Weather Application
+React Weather Application
 
 A clean, responsive weather dashboard built with React and Vite, integrating the OpenWeatherMap API to display real-time current weather conditions for any city worldwide.
 
